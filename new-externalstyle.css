@@ -1,0 +1,13 @@
+		.para{
+		color:red;
+		}
+		[name='first']{
+		color:gray;
+		}
+		button:hover{
+		color:orange;
+		}
+		.testingbox{
+		padding:10px;
+		
+		}
