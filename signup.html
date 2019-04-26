@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<title>my new web application</title>
+		<link rel="stylesheet" type="text/css" href="new-externalstyle.css"></link>
+		<script type="text/javascript">
+		function togglemenu(){
+		
+		document.getElementById('sidebar').classList.toggle('active');
+		}
+		function sub(){
+		var name=document.forms["regform"]["fullname"].value;
+		if(name.value==""){
+		window.alert("please enter full name");
+		name.focus();
+		return false;
+		}
+		}
+		function male(){
+		alert("hello you have entred male");
+		}
+		</script>
+    </head>
+	<body>
+		<div id="sidebar" onclick="togglemenu()">
+		  <div class="toggle-btn">
+		  <span></span>
+		  <span></span>
+		  <span></span>
+		  </div>
+		  <ul>
+		    <li><a href="index.html">Home</a></li>
+			<li><a href="calculator.html">Calculator</a></li>
+			<li><a href="signup.html">Sign up</a></li>
+		  </ul>
+		</div>
+		<div class="reg">
+	      <h1>Registration Form</h1><br>
+           <div class="details">
+	         <form name="regform" method="post" id="formdetails" action="index.html" onsubmit="return sub()">
+                <label>Full Name <input type="text" required name="fullname" id="fname" placeholder="Enter Full Name"></label>
+				<br>
+				<label>Secret Pin   <input type="password" size="4" name="pass" id="pass" placeholder="Pin"></label>
+				<br>
+				<label>Gender  <input onclick="return male()" type="radio" name="male" id="male"><span id="male">&nbsp; Male</span>
+				<input type="radio" name="male" id="female"><span id="male">&nbsp; Female</span></label>
+				<br>
+				<label>I am an expert in</label>
+				<input type="checkbox" name="HTML" value="HTML" id="html"><label for="html">HTML</label>
+				<input type="checkbox" name="HTML" value="HTML" id="html"><label for="css">CSS</label><br>
+				<label>My field of study is : <select style="padding:7px" id="select"><option value="cse">Computer Science Engineering</option>
+				<option value="ece">Electrical and Communication Engineering</option>
+				<option value="IT">Information Technology</option></select>
+				</label><br>
+				<label>Tell me about yourself :<textarea style="margin-top:12px" rows="4" cols="50" placeholder="Describe about you"></textarea></label><br>
+               <input type="submit" value="submit" id="sub" onclick="sub()">          
+			</form>			 
+		   </div>		  
+		</div>
+<script src="my_new_js.js">
+</script>
+		</body>
+</html>
